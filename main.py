@@ -1,5 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QLabel
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
+from PyQt5.QtCore import QSize
+from PyQt5.QtGui import QIcon
 from PyQt5 import uic
 
 
@@ -24,6 +26,10 @@ class Main(QMainWindow):
         self.scrollArea.setWidget(self.control_panel)
         self.light_view = Light()
         self.control_panel.lightButton.clicked.connect(self.light)
+        self.control_panel.lightButton.setIcon(QIcon('images/bulb2.png'))
+        self.control_panel.tempButton.setIcon(QIcon('images/temp2.png'))
+        self.control_panel.humidButton.setIcon(QIcon('images/humidity.png'))
+        self.control_panel.fanButton.setIcon(QIcon('images/fan.png'))
         self.control_panel.tempButton.clicked.connect(self.temp)
         self.handler.addWidget(self.light_view)
         pass

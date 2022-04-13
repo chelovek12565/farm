@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>100</height>
+    <width>567</width>
+    <height>130</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,14 +18,14 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>500</width>
-    <height>100</height>
+    <width>567</width>
+    <height>130</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>550</width>
-    <height>100</height>
+    <width>567</width>
+    <height>130</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -34,65 +34,14 @@
   <property name="styleSheet">
    <string notr="true">QPushButton {font: 63 12pt &quot;Segoe UI Semibold&quot;}
 QPushButton:hover{background: #2666DE; border:none;}
-QWidget {background: white;}
+QLabel {font: 63 11pt &quot;Segoe UI Semibold&quot;; color: black}
+QWidget {background: white}
 </string>
   </property>
-  <widget class="QPushButton" name="lightButton">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>20</y>
-     <width>71</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>70</width>
-     <height>0</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>16777215</width>
-     <height>90</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Semibold</family>
-     <pointsize>12</pointsize>
-     <weight>7</weight>
-     <italic>false</italic>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string>💡Свет</string>
-   </property>
-   <property name="autoDefault">
-    <bool>false</bool>
-   </property>
-   <property name="default">
-    <bool>false</bool>
-   </property>
-  </widget>
   <widget class="QPushButton" name="tempButton">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>150</x>
      <y>20</y>
      <width>120</width>
      <height>71</height>
@@ -126,7 +75,13 @@ QWidget {background: white;}
     <string notr="true"/>
    </property>
    <property name="text">
-    <string>Температура</string>
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
    </property>
    <property name="autoDefault">
     <bool>false</bool>
@@ -138,7 +93,7 @@ QWidget {background: white;}
   <widget class="QPushButton" name="humidButton">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>290</x>
      <y>20</y>
      <width>120</width>
      <height>71</height>
@@ -170,63 +125,199 @@ QWidget {background: white;}
    </property>
    <property name="styleSheet">
     <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="fanButton">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>20</y>
+     <width>120</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>12</pointsize>
+     <weight>7</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>120</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Свет</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>100</y>
+     <width>120</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Температура</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="lightButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>120</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>12</pointsize>
+     <weight>7</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>100</y>
+     <width>120</width>
+     <height>16</height>
+    </rect>
    </property>
    <property name="text">
     <string>Влажность</string>
    </property>
-   <property name="autoDefault">
-    <bool>false</bool>
-   </property>
-   <property name="default">
-    <bool>false</bool>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="ventButton">
+  <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>20</y>
-     <width>131</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
+     <x>430</x>
+     <y>100</y>
      <width>120</width>
-     <height>0</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Semibold</family>
-     <pointsize>12</pointsize>
-     <weight>7</weight>
-     <italic>false</italic>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
+     <height>20</height>
+    </rect>
    </property>
    <property name="text">
     <string>Вентиляторы</string>
    </property>
-   <property name="autoDefault">
-    <bool>false</bool>
-   </property>
-   <property name="default">
-    <bool>false</bool>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
+  <zorder>tempButton</zorder>
+  <zorder>humidButton</zorder>
+  <zorder>fanButton</zorder>
+  <zorder>lightButton</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
  </widget>
  <resources/>
  <connections/>

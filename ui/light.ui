@@ -35,7 +35,7 @@ font-family: &quot;Segoe UI Semibold&quot;;}</string>
         <enum>Qt::Horizontal</enum>
        </property>
        <property name="sizeType">
-        <enum>QSizePolicy::Expanding</enum>
+        <enum>QSizePolicy::MinimumExpanding</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
@@ -67,21 +67,32 @@ font-family: &quot;Segoe UI Semibold&quot;;}</string>
         </spacer>
        </item>
        <item>
-        <widget class="QLabel" name="label_3">
-         <property name="font">
-          <font>
-           <family>Segoe UI Semibold</family>
-           <pointsize>16</pointsize>
-          </font>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
          </property>
-         <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {font: 63 12pt &quot;Segoe UI Semibold&quot;; border: 2px solid grey;
+border-radius: 10px}
+</string>
          </property>
          <property name="text">
           <string>Текущее освещение - N Лк</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -137,7 +148,7 @@ font-family: &quot;Segoe UI Semibold&quot;;}</string>
           <enum>Qt::StrongFocus</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">QDial {background: 	#2666DE}
+          <string notr="true">QDial {background: rgb(32, 42, 236)}
 </string>
          </property>
          <property name="invertedControls">
@@ -237,7 +248,7 @@ font-family: &quot;Segoe UI Semibold&quot;;}</string>
         <enum>Qt::Horizontal</enum>
        </property>
        <property name="sizeType">
-        <enum>QSizePolicy::Expanding</enum>
+        <enum>QSizePolicy::MinimumExpanding</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
