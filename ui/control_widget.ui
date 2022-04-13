@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>741</width>
+    <width>500</width>
     <height>100</height>
    </rect>
   </property>
@@ -18,13 +18,13 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>741</width>
+    <width>500</width>
     <height>100</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>16777215</width>
+    <width>550</width>
     <height>100</height>
    </size>
   </property>
@@ -32,12 +32,15 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">QPushButton {font: 63 12pt &quot;Segoe UI Semibold&quot;}
+QPushButton:hover{background: #2666DE; border:none;}
+QWidget {background: white;}
+</string>
   </property>
   <widget class="QPushButton" name="lightButton">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>10</x>
      <y>20</y>
      <width>71</width>
      <height>71</height>
@@ -63,8 +66,11 @@
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI Variable Text Semibold</family>
-     <pointsize>10</pointsize>
+     <family>Segoe UI Semibold</family>
+     <pointsize>12</pointsize>
+     <weight>7</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="autoFillBackground">
@@ -86,7 +92,7 @@
   <widget class="QPushButton" name="tempButton">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>90</x>
      <y>20</y>
      <width>120</width>
      <height>71</height>
@@ -106,8 +112,11 @@
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI Variable Text Semibold</family>
-     <pointsize>10</pointsize>
+     <family>Segoe UI Semibold</family>
+     <pointsize>12</pointsize>
+     <weight>7</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="autoFillBackground">
@@ -129,7 +138,7 @@
   <widget class="QPushButton" name="humidButton">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>220</x>
      <y>20</y>
      <width>120</width>
      <height>71</height>
@@ -149,8 +158,11 @@
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI Variable Text Semibold</family>
-     <pointsize>10</pointsize>
+     <family>Segoe UI Semibold</family>
+     <pointsize>12</pointsize>
+     <weight>7</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="autoFillBackground">
@@ -172,7 +184,7 @@
   <widget class="QPushButton" name="ventButton">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>350</x>
      <y>20</y>
      <width>131</width>
      <height>71</height>
@@ -192,8 +204,11 @@
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI Variable Text Semibold</family>
-     <pointsize>10</pointsize>
+     <family>Segoe UI Semibold</family>
+     <pointsize>12</pointsize>
+     <weight>7</weight>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="autoFillBackground">

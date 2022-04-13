@@ -22,9 +22,12 @@ QPushButton  {font-family: &quot;Segoe UI Variable Text Semibold&quot;;
 					background: white;
 					border: 2px solid grey;
 					border-radius: 20px;}
-QMainWindow {backgroung: #E5E5E5}
+QMainWindow {background: #E0FFFF}
+
 QScrollArea {border: none;
-					background-color: none;}</string>
+					background-color: none;}
+QLabel {font-family: &quot;Segoe UI Variable Text Semibold&quot;}
+QVBoxLayout {backround: rgb(201, 218, 255)}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -47,6 +50,9 @@ QScrollArea {border: none;
         <width>12345678</width>
         <height>91</height>
        </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
@@ -109,6 +115,13 @@ QScrollArea {border: none;
            <height>150</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QScrollArea {
+border: 2px solid grey;
+border-radius: 10px;
+background: white
+}</string>
+         </property>
          <property name="verticalScrollBarPolicy">
           <enum>Qt::ScrollBarAsNeeded</enum>
          </property>
@@ -123,8 +136,8 @@ QScrollArea {border: none;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>478</width>
-            <height>133</height>
+            <width>474</width>
+            <height>129</height>
            </rect>
           </property>
          </widget>
@@ -137,6 +150,11 @@ QScrollArea {border: none;
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QStackedWidget {border: 2px solid grey;
+border-radius: 20px;
+background: white}</string>
          </property>
         </widget>
        </item>
