@@ -126,7 +126,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="lightButton_5">
+  <widget class="QPushButton" name="humidButton">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -169,7 +169,7 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="lightButton_6">
+  <widget class="QPushButton" name="ventButton">
    <property name="geometry">
     <rect>
      <x>370</x>

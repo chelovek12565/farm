@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QLabel
 from PyQt5 import uic
 
 
@@ -20,17 +20,24 @@ class Main(QMainWindow):
         super(Main, self).__init__()
         uic.loadUi('ui/main.ui', self)
         self.control_panel = ControlPanel()
+        self.setWindowTitle('Ситифермы')
         self.scrollArea.setWidget(self.control_panel)
         self.light_view = Light()
         self.control_panel.lightButton.clicked.connect(self.light)
+        self.control_panel.tempButton.clicked.connect(self.temp)
+        self.handler.addWidget(self.light_view)
         pass
 
     def light(self):
-        self.handler.setWidget(self.light_view)
+        pass
+
+    def temp(self):
+        pass
 
 
 def except_hook(cls, exception, traceback):
     sys.__excepthook__(cls, exception, traceback)
+
 
 app = QApplication(sys.argv)
 sys.excepthook = except_hook
