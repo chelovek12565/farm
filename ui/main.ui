@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>514</width>
+    <width>509</width>
     <height>1217</height>
    </rect>
   </property>
@@ -54,40 +54,44 @@ QVBoxLayout {backround: rgb(201, 218, 255)}</string>
       <property name="styleSheet">
        <string notr="true"/>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
-        <widget class="QPushButton" name="addButton">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>70</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>70</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Segoe UI Variable Text Semibold</family>
-           <pointsize>15</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>+</string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="farmsLayout">
+         <item>
+          <widget class="QPushButton" name="addButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Segoe UI Variable Text Semibold</family>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>+</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </widget>
@@ -123,7 +127,7 @@ background: white
 }</string>
          </property>
          <property name="verticalScrollBarPolicy">
-          <enum>Qt::ScrollBarAlwaysOn</enum>
+          <enum>Qt::ScrollBarAsNeeded</enum>
          </property>
          <property name="horizontalScrollBarPolicy">
           <enum>Qt::ScrollBarAlwaysOn</enum>
@@ -136,7 +140,7 @@ background: white
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>457</width>
+            <width>469</width>
             <height>149</height>
            </rect>
           </property>
@@ -168,7 +172,7 @@ background: white}</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>514</width>
+     <width>509</width>
      <height>21</height>
     </rect>
    </property>
