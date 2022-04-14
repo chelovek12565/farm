@@ -14,7 +14,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">font:  63 10pt &quot;Segoe UI Semibold&quot;;</string>
+   <string notr="true">font:  63 13pt &quot;Segoe UI Semibold&quot;;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -34,7 +34,7 @@
      <property name="font">
       <font>
        <family>Segoe UI Semibold</family>
-       <pointsize>10</pointsize>
+       <pointsize>13</pointsize>
        <weight>7</weight>
        <italic>false</italic>
        <bold>false</bold>
