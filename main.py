@@ -1,6 +1,4 @@
 import sys
-import requests
-import asyncio
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 from PyQt5.QtCore import QSize
 from PyQt5.QtGui import QIcon, QPainter, QBrush, QColor
@@ -14,11 +12,17 @@ class ControlPanel(QWidget):
 
 
 class Light(QWidget):
-    def __init__(self):
+    def __init__(self, light):
         super(Light, self).__init__()
         uic.loadUi('ui/light.ui', self)
-        self.light = None
+        self.light = light
+        self.lineEdit.setText(f'{light} Лк')
+        self.dial.setValue(int(light / 100))
+        self.dial.valueChanged.connect(self.change)
 
+    def change(self):
+        self.light = self.dial.value() * 100
+        self.lineEdit.setText(f'{self.light} Лк')
 
 class Humidity(QWidget):
     def __init__(self):
@@ -35,17 +39,21 @@ class Humidity(QWidget):
         self.downButton_2.clicked.connect(self.earth_down)
 
     def air_up(self):
-        if self.value() != 100:
+        if self.lcdNumber_1.value() != 100:
             self.lcdNumber_1.display(self.lcdNumber_1.value() + 5)
 
     def air_down(self):
-        self.lcdNumber_1.display(self.lcdNumber_1.value() - 5)\
+        if self.lcdNumber_1.value() != 0:
+            self.lcdNumber_1.display(self.lcdNumber_1.value() - 5)\
 
     def earth_up(self):
-        pass
+        if self.lcdNumber_2.value() != 100:
+            self.lcdNumber_2.display(self.lcdNumber_2.value() + 5)
+
 
     def earth_down(self):
-        pass
+        if self.lcdNumber_2.value() != 0:
+            self.lcdNumber_2.display(self.lcdNumber_2.value() - 5)
 
 
 class Temperature(QWidget):
@@ -108,16 +116,15 @@ class Main(QMainWindow):
     def __init__(self):
         super(Main, self).__init__()
         uic.loadUi('ui/main.ui', self)
-        data = requests.get('http://localhost:5000/all').json()
+        data = {'temp': 24, 'light': 8000}
         temp = data['temp']
         self.control_panel = ControlPanel()
         self.setWindowTitle('Ситифермы')
         self.scrollArea.setWidget(self.control_panel)
-        self.light_view = Light()
+        self.light_view = Light(data['light'])
         self.temp_view = Temperature(temp)
         self.humid_view = Humidity()
         self.fans_view = Fans()
-        self.light_view.light = data['light']
         self.control_panel.lightButton.clicked.connect(self.light)
         self.control_panel.lightButton.setIcon(QIcon('images/bulb2.png'))
         self.control_panel.tempButton.setIcon(QIcon('images/temp2.png'))
