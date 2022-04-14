@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 data = {
-    'light': 10000,
+    'light': 8000,
     'temp': 20,
     'vent': True
 }
@@ -22,6 +22,11 @@ def return_all_data():
 def send_command():
     command = request.json['command']
     # TODO do_something
+
+
+@app.route('/api/temperature', methods=['PUT'])
+def temperature():
+    data['temp'] = request.json['temp']
 
 
 app.run()
