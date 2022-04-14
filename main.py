@@ -112,6 +112,12 @@ class Fans(QWidget):
         self.repaint()
 
 
+class Adder(QWidget):
+    def __init__(self):
+        super(Adder, self).__init__()
+        uic.loadUi('ui/adder.ui', self)
+
+
 class Main(QMainWindow):
     def __init__(self):
         super(Main, self).__init__()
@@ -133,12 +139,12 @@ class Main(QMainWindow):
         self.control_panel.tempButton.clicked.connect(self.temp)
         self.control_panel.humidButton.clicked.connect(self.humid)
         self.control_panel.fanButton.clicked.connect(self.fan)
+        self.adder = Adder()
         self.handler.addWidget(self.light_view)
         self.handler.addWidget(self.temp_view)
         self.handler.addWidget(self.humid_view)
         self.handler.addWidget(self.fans_view)
-
-        pass
+        self.scrollArea_2.setWidget(self.adder)
 
     def light(self):
         self.handler.setCurrentIndex(0)
