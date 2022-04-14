@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>509</width>
+    <width>513</width>
     <height>1217</height>
    </rect>
   </property>
@@ -130,7 +130,7 @@ background: white
           <enum>Qt::ScrollBarAsNeeded</enum>
          </property>
          <property name="horizontalScrollBarPolicy">
-          <enum>Qt::ScrollBarAlwaysOn</enum>
+          <enum>Qt::ScrollBarAsNeeded</enum>
          </property>
          <property name="widgetResizable">
           <bool>true</bool>
@@ -140,8 +140,8 @@ background: white
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>469</width>
-            <height>149</height>
+            <width>465</width>
+            <height>166</height>
            </rect>
           </property>
          </widget>
@@ -172,8 +172,8 @@ background: white}</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>509</width>
-     <height>21</height>
+     <width>513</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

@@ -30,6 +30,9 @@ font-family: &quot;Segoe UI Semibold&quot;;}</string>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2"/>
+     </item>
+     <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -80,13 +83,22 @@ font-family: &quot;Segoe UI Semibold&quot;;}</string>
            <height>0</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>12</pointsize>
+           <weight>7</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">QLineEdit {font: 63 12pt &quot;Segoe UI Semibold&quot;; border: 2px solid grey;
 border-radius: 10px}
 </string>
          </property>
          <property name="text">
-          <string>Текущее освещение - N Лк</string>
+          <string>N Лк</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
