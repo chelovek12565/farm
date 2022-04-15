@@ -39,7 +39,7 @@ background: white}</string>
       </font>
      </property>
      <property name="text">
-      <string>Влажность почвы</string>
+      <string>Влажность питательного раствора</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
